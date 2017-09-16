@@ -262,46 +262,118 @@ int i=0;
 	@Override
 	public Student[] getByBirthDate(Date date) {
 		// Add your implementation here
-		int i=0;
+		int i=0,f,j=0;
 		if(date==null)
 			throw new IllegalArgumentException();
-		return null;
+		while(students[i]!=null)
+		{
+			f=Student.birthDate.compareTo(date);
+			if(f==-1 || f==0)
+			{
+				s[j]=students[i];
+				j++;
+				i++;
+			}
+			else i++;
+		}
+		return s;
 	}
 
 	@Override
 	public Student[] getBetweenBirthDates(Date firstDate, Date lastDate) {
 		// Add your implementation here
-		return null;
+		int i=0,j=0;
+		Date f;
+		if(firstDate==null || lastDate==null)
+			throw new IllegalArgumentException();
+		while(students[i]!=null)
+		{
+			
+				
+		}
+		return s;
 	}
 
 	@Override
 	public Student[] getNearBirthDate(Date date, int days) {
 		// Add your implementation here
+		int i=0,f,j=0;
+		if(date==null)
+			throw new IllegalArgumentException();
+		while(students[i]!=null)
+		{
+			f=Student.birthDate.compareTo(date);
+			if(f==-1 || f==0)
+			{
+				s[j]=students[i];
+				j++;
+				i++;
+			}
+			
+			else i++;
+		}
 		return null;
 	}
 
 	@Override
 	public int getCurrentAgeByDate(int indexOfStudent) {
 		// Add your implementation here
+		int i=0;
+		if(indexOfStudent==0)
+			throw new IllegalArgumentException();
+		while(students[i]!=null)
+		{
+			if(students[i]==students[indexOfStudent])
+			{
+				return Student.age;
+				
+			}
+			else i++;
+		}
 		return 0;
 	}
 
 	@Override
 	public Student[] getStudentsByAge(int age) {
 		// Add your implementation here
-		return null;
+		int i=0,j=0;
+		while(students[i]!=null)
+		{
+			if(Student.age==age)
+			{
+				s[j]=students[i];
+				j++;
+				i++;
+			}
+			else
+				i++;
+		}
+		return s;
 	}
 
 	@Override
 	public Student[] getStudentsWithMaxAvgMark() {
 		// Add your implementation here
+		
 		return null;
 	}
 
 	@Override
 	public Student getNextStudent(Student student) {
 		// Add your implementation here
-		
+		int i=0;
+		if(student==null)
+			throw new IllegalArgumentException();
+		while(students[i]!=null)
+		{
+			if(students[i]==student)
+            {
+				return students[i+1];
+			}				
+			else
+			i++;
+			
+		}
 		return null;
 	}
 }
