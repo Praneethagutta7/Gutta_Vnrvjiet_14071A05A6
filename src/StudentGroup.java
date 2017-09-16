@@ -262,12 +262,12 @@ int i=0;
 	@Override
 	public Student[] getByBirthDate(Date date) {
 		// Add your implementation here
-		int i=0,f,j=0;
+		int i=0,f=0,j=0;
 		if(date==null)
 			throw new IllegalArgumentException();
 		while(students[i]!=null)
 		{
-			f=Student.birthDate.compareTo(date);
+			//f=Student.birthDate.compareTo(date);
 			if(f==-1 || f==0)
 			{
 				s[j]=students[i];
@@ -283,7 +283,7 @@ int i=0;
 	public Student[] getBetweenBirthDates(Date firstDate, Date lastDate) {
 		// Add your implementation here
 		int i=0,j=0;
-		Date f;
+		//Date f;
 		if(firstDate==null || lastDate==null)
 			throw new IllegalArgumentException();
 		while(students[i]!=null)
@@ -297,12 +297,12 @@ int i=0;
 	@Override
 	public Student[] getNearBirthDate(Date date, int days) {
 		// Add your implementation here
-		int i=0,f,j=0;
+		int i=0,f=0,j=0;
 		if(date==null)
 			throw new IllegalArgumentException();
 		while(students[i]!=null)
 		{
-			f=Student.birthDate.compareTo(date);
+			//f=Student.birthDate.compareTo(date);
 			if(f==-1 || f==0)
 			{
 				s[j]=students[i];
@@ -312,7 +312,7 @@ int i=0;
 			
 			else i++;
 		}
-		return null;
+		return s;
 	}
 
 	@Override

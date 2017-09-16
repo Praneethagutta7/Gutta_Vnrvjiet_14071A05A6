@@ -24,12 +24,12 @@ public class Student implements Comparable {
 	/**
 	 * student date of birth in "yyyy-MM-dd" format
 	 */
-	static Date birthDate;
+	private Date birthDate;
 
 	/**
 	 * student average mark
 	 */
-	static double avgMark;
+	private double avgMark;
 	static int age;
 
 	public Student(int id, String fullName, Date birthDate, double avgMark,int age) {
